@@ -21,21 +21,21 @@ public class GestionDeMedias {
     }
 
     public void afficherLesMedias(){
-        System.out.println("");
+        System.out.println();
         for (Media media : medias){
             media.afficher();
         }
     }
 
     public void afficherLesAdherants(){
-        System.out.println("");
+        System.out.println();
         for (Adherant adherant : adherants){
             adherant.afficher();
         }
     }
 
     public void afficherLesEmprunts(){
-        System.out.println("");
+        System.out.println();
         for (Emprunt emprunt : emprunts){
             emprunt.afficher();
         }
@@ -80,20 +80,22 @@ public class GestionDeMedias {
 
     //recherche un adhérant dans la liste
     //génère une exception AdherantNonTrouveException s'il n'existe pas
-/*    public Adherant rechercheryAdherant(String idAdherant){
+    public Adherant rechercheryAdherant(String idAdherant){
         Adherant adherantTrouve = null;
 
         //boucle sur la liste des adhérants
         for(Adherant adherant : adherants){
-            if (){
-
-            }
             //si l'id = id de l'adhérant alors
-                //adherant = à l'objet trouvé
+            if (idAdherant == adherant.getIdAdherant()){
+                // l'adhérant a été trouvé
+                adherantTrouve = adherant;
+            }
         }
-
+        if(adherantTrouve == null){
+            throw new AdherantNonTrouveException(idAdherant);
+        }
         //si adherant == null alors
             //génère une exception de type AdherantNonTrouveException
-        return adherant;
-    }*/
+        return adherantTrouve;
+    }
 }
