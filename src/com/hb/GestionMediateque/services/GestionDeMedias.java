@@ -1,4 +1,7 @@
-package com.hb.GestionMediateque;
+package com.hb.GestionMediateque.services;
+
+import com.hb.GestionMediateque.exception.AdherantNonTrouveException;
+import com.hb.GestionMediateque.pojo.*;
 
 import java.util.ArrayList;
 import java.util.Collections;

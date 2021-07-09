@@ -1,6 +1,6 @@
-package com.hb.GestionMediateque;
+package com.hb.GestionMediateque.pojo;
 
-public class CDAudio extends Media{
+public class CDAudio extends Media {
 
     // attributs
     private String cdAuthor;

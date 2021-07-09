@@ -1,8 +1,9 @@
 package com.hb.GestionMediateque;
 
-import java.util.ArrayList;
+import com.hb.GestionMediateque.pojo.*;
+import com.hb.GestionMediateque.services.GestionDeMedias;
+
 import java.util.Date;
-import java.util.List;
 import java.util.Scanner;
 
 public class GestionMediathequeMain {

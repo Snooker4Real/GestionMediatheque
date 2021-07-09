@@ -1,4 +1,4 @@
-package com.hb.GestionMediateque;
+package com.hb.GestionMediateque.pojo;
 
 public class Livre extends Media{
 

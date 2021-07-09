@@ -1,4 +1,4 @@
-package com.hb.GestionMediateque;
+package com.hb.GestionMediateque.pojo;
 
 public class Encyclopedie extends Media{
 

@@ -1,4 +1,4 @@
-package com.hb.GestionMediateque;
+package com.hb.GestionMediateque.exception;
 
 public class AdherantNonTrouveException extends RuntimeException{
 

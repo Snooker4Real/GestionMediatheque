@@ -1,6 +1,7 @@
-package com.hb.GestionMediateque;
+package com.hb.GestionMediateque.pojo;
 
 import java.util.Date;
+
 
 public class Emprunt {
 
@@ -58,7 +59,6 @@ public class Emprunt {
         this.dateEmprunt = dateEmprunt;
         this.dateRetour = dateRetour;
     }
-
 
     public void afficher(){
         System.out.println("L\'emprunt n°" + idEmprunt + " est fait par l\'adhérant n°" + idAdherant);
