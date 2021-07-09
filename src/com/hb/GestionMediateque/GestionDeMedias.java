@@ -100,7 +100,9 @@ public class GestionDeMedias {
         return adherantTrouve;
     }
 
-    public void trierMedia(){
+    public void trierMedia(int typeTri){
+        Media.typeTri = typeTri;
         Collections.sort(medias);
+        System.out.println("Tri validé");
     }
 }

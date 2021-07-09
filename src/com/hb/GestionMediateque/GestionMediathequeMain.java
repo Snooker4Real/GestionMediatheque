@@ -21,8 +21,9 @@ public class GestionMediathequeMain {
             System.out.println("7.  Créer une Encyclopédie");
             System.out.println("8.  Créer un adhérant");
             System.out.println("9.  Créer un emprunt");
-            System.out.println("10. Trier la liste des médias");
-            System.out.println("11.  Quitter");
+            System.out.println("10. Trier la liste des médias par numéro");
+            System.out.println("11. Trier la liste des médias par titre");
+            System.out.println("12.  Quitter");
 
             //System.out.print("Choisissez une opération : ");
 
@@ -84,9 +85,12 @@ public class GestionMediathequeMain {
                     Thread.sleep(3500);
                     break;
                 case 10:
-                    media.trierMedia();
+                    media.trierMedia(Media.TRI_NUMER0);
                     break;
                 case 11:
+                    media.trierMedia(Media.TRI_TITRE);
+                    break;
+                case 12:
                     System.exit(0);
                     break;
                 default:

@@ -1,13 +1,15 @@
 package com.hb.GestionMediateque;
 
-public class Media implements Comparable<Media>{
+public abstract class Media implements Comparable<Media>{
 
     // attributs
     protected String nbRecording;
     protected String title;
     public static int typeTri;
 
+    //constantes
     public static final int TRI_NUMER0 = 1;
+    public static final int TRI_TITRE = 1;
 
     public int getNumero() {
         return numero;
@@ -54,20 +56,21 @@ public class Media implements Comparable<Media>{
         System.out.println("Titre : " + title);
     }
 
-/*    @Override
+    @Override
     public int compareTo(Media o) {
 
-        if(this.typeTri > o.typeTri)
-            return 1;
-        else if(this.typeTri < o.typeTri)
-            return -1;
-        else
-            return 0;
-
-    }*/
-
-    @Override
-    public int compareTo(Media o){
-        return this.title.compareTo(o.getTitle());
+        if (typeTri == TRI_NUMER0){
+            if(this.typeTri > o.typeTri)
+                return 1;
+            else if(this.typeTri < o.typeTri)
+                return -1;
+            else
+                return 0;
+        }
+        else if (typeTri == TRI_TITRE){
+            return this.title.compareTo(o.getTitle());
+        }
+        return 0;
     }
+
 }
