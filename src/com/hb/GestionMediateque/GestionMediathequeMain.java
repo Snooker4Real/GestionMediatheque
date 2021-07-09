@@ -21,7 +21,9 @@ public class GestionMediathequeMain {
             System.out.println("7.  Créer une Encyclopédie");
             System.out.println("8.  Créer un adhérant");
             System.out.println("9.  Créer un emprunt");
-            System.out.println("10.  Quitter");
+            System.out.println("10. Trier la liste des médias");
+            System.out.println("11.  Quitter");
+
             //System.out.print("Choisissez une opération : ");
 
             Scanner sc = new Scanner(System.in);
@@ -78,10 +80,13 @@ public class GestionMediathequeMain {
                     break;
                 case 9:
                     System.out.println("Ajout d'un emprunt");
-                    creerEmprunt(media);
+                    //creerEmprunt(media);
                     Thread.sleep(3500);
                     break;
                 case 10:
+                    media.trierMedia();
+                    break;
+                case 11:
                     System.exit(0);
                     break;
                 default:
@@ -226,7 +231,7 @@ public class GestionMediathequeMain {
         media.afficherLesAdherants();
     }
 
-    public static void creerEmprunt(GestionDeMedias media){
+    public void creerEmprunt(GestionDeMedias media){
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Identifiant emprunt :");
@@ -235,6 +240,7 @@ public class GestionMediathequeMain {
 
         System.out.print("Identifiant adhérant :");
         String idAdherant = sc.nextLine();
+        //GestionDeMedias.rechercherAdherant(idAdherant);
         System.out.println(idAdherant);
 
         System.out.print("Numero d'enregistrement :");

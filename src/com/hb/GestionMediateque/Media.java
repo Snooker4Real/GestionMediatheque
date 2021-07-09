@@ -1,10 +1,25 @@
 package com.hb.GestionMediateque;
 
-public class Media {
+public class Media implements Comparable<Media>{
 
     // attributs
     protected String nbRecording;
     protected String title;
+    public static int typeTri;
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public Media(int numero) {
+        this.numero = numero;
+    }
+
+    protected int numero;
 
     //get & set
     public String getNbRecording() {
@@ -35,5 +50,22 @@ public class Media {
         System.out.println("");
         System.out.println("N° enregistrement : " + nbRecording);
         System.out.println("Titre : " + title);
+    }
+
+/*    @Override
+    public int compareTo(Media o) {
+
+        if(this.numero > o.numero)
+            return 1;
+        else if(this.numero < o.numero)
+            return -1;
+        else
+            return 0;
+
+    }*/
+
+    @Override
+    public int compareTo(Media o){
+        return this.title.compareTo(o.getTitle());
     }
 }

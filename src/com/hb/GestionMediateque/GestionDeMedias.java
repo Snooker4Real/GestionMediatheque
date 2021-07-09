@@ -1,6 +1,7 @@
 package com.hb.GestionMediateque;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class GestionDeMedias {
@@ -46,7 +47,7 @@ public class GestionDeMedias {
         //on parcours la liste avec un for (foreach)
         for(Media media : medias){
             if (media instanceof Livre) {
-                //on cast le Lvre en Livre
+                //on cast le Livre en Livre
                 Livre livre = (Livre)media;
                 System.out.println(livre.getBookAuthor());
             }
@@ -80,7 +81,7 @@ public class GestionDeMedias {
 
     //recherche un adhérant dans la liste
     //génère une exception AdherantNonTrouveException s'il n'existe pas
-    public Adherant rechercheryAdherant(String idAdherant){
+    public Adherant rechercherAdherant(String idAdherant){
         Adherant adherantTrouve = null;
 
         //boucle sur la liste des adhérants
@@ -97,5 +98,9 @@ public class GestionDeMedias {
         //si adherant == null alors
             //génère une exception de type AdherantNonTrouveException
         return adherantTrouve;
+    }
+
+    public void trierMedia(){
+        Collections.sort(medias);
     }
 }
