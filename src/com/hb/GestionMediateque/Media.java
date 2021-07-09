@@ -7,6 +7,8 @@ public class Media implements Comparable<Media>{
     protected String title;
     public static int typeTri;
 
+    public static final int TRI_NUMER0 = 1;
+
     public int getNumero() {
         return numero;
     }
@@ -55,9 +57,9 @@ public class Media implements Comparable<Media>{
 /*    @Override
     public int compareTo(Media o) {
 
-        if(this.numero > o.numero)
+        if(this.typeTri > o.typeTri)
             return 1;
-        else if(this.numero < o.numero)
+        else if(this.typeTri < o.typeTri)
             return -1;
         else
             return 0;
