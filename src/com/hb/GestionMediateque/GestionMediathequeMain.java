@@ -7,6 +7,7 @@ import com.hb.GestionMediateque.services.GestionDeMedias;
 
 
 import java.util.Date;
+import java.util.List;
 import java.util.Scanner;
 
 public class GestionMediathequeMain {
@@ -57,7 +58,12 @@ public class GestionMediathequeMain {
                     break;
                 case 2:
                     System.out.println("Liste des adhérents: ");
-                    media.afficherLesAdherants();
+                    //media.afficherLesAdherants();
+
+                    List<Adherant> adherants = adherantService.recupererAdherants();
+                    for(Adherant adherant : adherants){
+                        adherant.afficher();
+                    }
                     Thread.sleep(3500);
                     break;
                 case 3:
@@ -118,9 +124,6 @@ public class GestionMediathequeMain {
         System.out.print("Numero d'enregistrement : ");
         String nbRecording = sc.nextLine();
         System.out.println(nbRecording);
-
-
-
 
         System.out.print("Titre : ");
         String title = sc.nextLine();
