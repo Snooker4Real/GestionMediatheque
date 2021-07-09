@@ -2,17 +2,17 @@ package com.hb.GestionMediateque.pojo;
 
 public class Adherant {
 
-    private String idAdherant;
+    private int idAdherant;
     private String firstnameAdherant;
     private String lastnameAdherant;
     private String emailAdherant;
     private String telAdherant;
 
-    public String getIdAdherant() {
+    public int getIdAdherant() {
         return idAdherant;
     }
 
-    public void setIdAdherant(String idAdherant) {
+    public void setIdAdherant(int idAdherant) {
         this.idAdherant = idAdherant;
     }
 
@@ -51,7 +51,7 @@ public class Adherant {
     //constructeur
     public Adherant(){
     }
-    public Adherant(String idadherant, String firstnameAdherant, String lastnameAdherant, String emailAdherant, String telAdherant){
+    public Adherant(int idadherant, String firstnameAdherant, String lastnameAdherant, String emailAdherant, String telAdherant){
         this.idAdherant = idadherant;
         this.firstnameAdherant = firstnameAdherant;
         this.lastnameAdherant = lastnameAdherant;

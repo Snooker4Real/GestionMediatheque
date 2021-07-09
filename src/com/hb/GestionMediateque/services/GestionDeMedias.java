@@ -84,7 +84,7 @@ public class GestionDeMedias {
 
     //recherche un adhérant dans la liste
     //génère une exception AdherantNonTrouveException s'il n'existe pas
-    public Adherant rechercherAdherant(String idAdherant){
+    public Adherant rechercherAdherant(int idAdherant){
         Adherant adherantTrouve = null;
 
         //boucle sur la liste des adhérants
@@ -96,7 +96,7 @@ public class GestionDeMedias {
             }
         }
         if(adherantTrouve == null){
-            throw new AdherantNonTrouveException(idAdherant);
+            throw new AdherantNonTrouveException("idAdherant");
         }
         //si adherant == null alors
             //génère une exception de type AdherantNonTrouveException

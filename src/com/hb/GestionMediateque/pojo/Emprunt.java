@@ -5,17 +5,17 @@ import java.util.Date;
 
 public class Emprunt {
 
-    private String idEmprunt;
+    private int idEmprunt;
     private String idAdherant;
     private String nbRecording;
     private Date dateEmprunt;
     private Date dateRetour;
 
-    public String getIdEmprunt() {
+    public int getIdEmprunt() {
         return idEmprunt;
     }
 
-    public void setIdEmprunt(String idEmprunt) {
+    public void setIdEmprunt(int idEmprunt) {
         this.idEmprunt = idEmprunt;
     }
 
@@ -52,7 +52,7 @@ public class Emprunt {
     }
 
     //constructeur
-    public Emprunt(String idEmprunt, String idAdherant, String nbRecording, Date dateEmprunt, Date dateRetour) {
+    public Emprunt(int idEmprunt, String idAdherant, String nbRecording, Date dateEmprunt, Date dateRetour) {
         this.idEmprunt = idEmprunt;
         this.idAdherant = idAdherant;
         this.nbRecording = nbRecording;

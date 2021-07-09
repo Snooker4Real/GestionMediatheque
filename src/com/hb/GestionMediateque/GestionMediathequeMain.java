@@ -1,15 +1,25 @@
 package com.hb.GestionMediateque;
 
 import com.hb.GestionMediateque.pojo.*;
+import com.hb.GestionMediateque.services.AdherantService;
+import com.hb.GestionMediateque.services.AdherantServiceImpl;
 import com.hb.GestionMediateque.services.GestionDeMedias;
+
 
 import java.util.Date;
 import java.util.Scanner;
 
 public class GestionMediathequeMain {
 
+    static GestionDeMedias gestionDeMedias;
+    static AdherantService adherantService;
+
     public static void main(String[] args) throws InterruptedException {
+        // instancie un objet GestionDeMedias
         GestionDeMedias media = new GestionDeMedias();
+
+        // instancie un objet AdherantService
+        adherantService = new AdherantServiceImpl();
         String menu = "1";
         while (menu == "1") {
             System.out.println("Gestion de Médiathèque");
@@ -82,7 +92,7 @@ public class GestionMediathequeMain {
                     break;
                 case 9:
                     System.out.println("Ajout d'un emprunt");
-                    //creerEmprunt(media);
+                    creerEmprunt(media);
                     Thread.sleep(3500);
                     break;
                 case 10:
@@ -231,12 +241,12 @@ public class GestionMediathequeMain {
         String telAdherant = sc.nextLine();
         System.out.println(telAdherant);
 
-        Adherant adherant = new Adherant(idAdherant, firstNameAdherant, lastNameAdherant, emailAdherant, telAdherant);
+        Adherant adherant = new Adherant(Integer.parseInt(idAdherant), firstNameAdherant, lastNameAdherant, emailAdherant, telAdherant);
         media.ajouterAdherant(adherant);
         media.afficherLesAdherants();
     }
 
-    public void creerEmprunt(GestionDeMedias media){
+    public static void creerEmprunt(GestionDeMedias media){
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Identifiant emprunt :");
@@ -260,7 +270,7 @@ public class GestionMediathequeMain {
         String dateRetour = sc.nextLine();
         System.out.println(dateRetour);
 
-        Emprunt emprunt = new Emprunt(idEmprunt, idAdherant, nbRecording, new Date(Date.parse(dateEmprunt)), new Date(Date.parse(dateRetour)));
+        Emprunt emprunt = new Emprunt(Integer.parseInt(idEmprunt), idAdherant, nbRecording, new Date(Date.parse(dateEmprunt)), new Date(Date.parse(dateRetour)));
         media.ajouterEmprunt(emprunt);
         media.afficherLesEmprunts();
     }
